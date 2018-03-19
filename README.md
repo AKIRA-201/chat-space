@@ -6,15 +6,15 @@
 |name|text|null:true|
 
 ### Association
-- belongs_to :users
-- belongs_to :groups
+- belongs_to :user
+- belongs_to :group
 
 ## groups table
 
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false, foreign_key: true|
-|name|type|null: false|
+|name|string|null: false|
 
 ### Association
 - has_many :users, through :members
@@ -25,20 +25,20 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|text|null: false|
+|name|string|null: false|
 
 ### Association
-- has_many :message
+- has_many :messages
 - has_many :groups through members
 - has_many :members
 
 ### messages table
 |Column|Type|Options|
 |------|----|-------|
-|message|text|null: true|
-|image|string|null: true|
+|message|text|
+|image|string|
 
 ### Asscociation
-- belongs_to :users
-- belongs_to :groups
+- belongs_to :user
+- belongs_to :group
 
