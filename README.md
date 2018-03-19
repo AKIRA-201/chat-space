@@ -2,8 +2,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|member_id|integer|null:true, foreign_key: true|
-|name|text|null:true|
+|member_id|integer|foreign_key: true|
+|name|text|
 
 ### Association
 - belongs_to :user
@@ -13,7 +13,6 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false, foreign_key: true|
 |name|string|null: false|
 
 ### Association
@@ -29,7 +28,7 @@
 
 ### Association
 - has_many :messages
-- has_many :groups through members
+- has_many :groups through :members
 - has_many :members
 
 ### messages table
