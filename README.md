@@ -3,7 +3,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |member_id|integer|foreign_key: true|
-|name|text|
+|name|string|
 
 ### Association
 - belongs_to :user
@@ -25,6 +25,8 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
+|e-mail_address|string|null: false|
+|pass_word|string|null: false|
 
 ### Association
 - has_many :messages
@@ -34,7 +36,7 @@
 ### messages table
 |Column|Type|Options|
 |------|----|-------|
-|message|text|
+||text|
 |image|string|
 
 ### Asscociation
