@@ -3,22 +3,23 @@
 |Column|Type|Options|
 |------|----|-------|
 |member_id|integer|null:true, foreign_key: true|
-|name|text|null:true, foreign_key: true|
+|name|text|null:true|
 
 ### Association
-- has_nany :users
-- belongs_to :members
+- belongs_to :users
+- belongs_to :group
 
 ## groups table
 
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false, foreign_key: true|
-|name|type|null: false, foreign_key: true|
+|name|type|null: false|
 
 ### Association
 - has_many :users, through :members
-- has_many :message
+- has_many :members
+- has_many :messages
 
 ## users table
 
@@ -28,7 +29,8 @@
 
 ### Association
 - has_many :message
-- has_many :group through members
+- has_many :groups through members
+- has_many :members
 
 ### messages table
 |Column|Type|Options|
@@ -37,5 +39,6 @@
 |image|string|null: true|
 
 ### Asscociation
-- belongs_to :users, :groups
+- belongs_to :users
+- belongs_to :groups
 
