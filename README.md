@@ -36,7 +36,7 @@
 ### messages table
 |Column|Type|Options|
 |------|----|-------|
-||text|
+|body|text|
 |image|string|
 
 ### Asscociation
