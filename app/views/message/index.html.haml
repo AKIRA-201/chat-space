@@ -6,7 +6,7 @@
     .header
       .left-header
         .left-header__title
-          SEO
+          Sampleグループ
         %ul.left-header__members
           Member：
           %li
@@ -18,34 +18,10 @@
       .right-header
         .right-header__button
           Edit
-    %ul.messages
-      %li.message
-        .upper-message
-          .upper-message__user-name
-            Rick
-          .upper-message__date
-            2017/04/04
-        .lower-meesage
-          .lower-message__content
-            hello!
-      %li.message
-        .upper-message
-          .upper-message__user-name
-            Judy
-          .upper-message__date
-            2017/04/04
-        .lower-meesage
-          .lower-message__content
-            Good morning!
-      %li.message
-        .upper-message
-          .upper-message__user-name
-            Michael
-          .upper-message__date
-            2017/04/04
-        .lower-meesage
-          .lower-message__content
-            Have a nice day!
+    .wrapper
+    = render partial: 'shared/messages'
+
+
     .form
       %form
         %input.form__message
