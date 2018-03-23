@@ -1,12 +1,44 @@
 .chat {
   width: calc(100% - 300px);
   .header {
-    background-color: white;
-    .left-header {
-    }
-    .right-header {
+    .main-header {
+      background-color: white;
+      box-sizing: border-box;
+      position: top;
+      padding: 0 40px;
+      height: 80px;
+      .left-header {
+        float: left;
+        color: white;
+        padding-bottom: 0px;
+        &__title {
+          color: #333;
+          font-size: 20px;
+          margin-top: 35px;
+        }
+        &__members {
+          color: #999;
+          display: flex;
+          font-size: 12px;
+          margin-top: 15px;
+          li {
+            display: inline-block;
+            padding-left: 5px;
+            font-color: white;
+          }
+        }
+      }
+      .right-header {
+        border: 1px solid $light_blue;
+        color: $light_blue;
+        float: right;
+        height: 40px;
+        margin-top: 28px;
+        padding: 0 20px;
+      }
     }
   }
+
   .messages {
     background-color: #FAFAFA;
     box-sizing: border-box;
@@ -38,11 +70,10 @@
   }
 
   .form {
-    background-color: #DDDDDD;
     box-sizing: border-box;
+    background-color: #DDDDDD;
     height: 90px;
     padding: 20px 50px 20px 40px;
-    position: fixed;
     bottom: 0;
     &__message {
       border: none;
