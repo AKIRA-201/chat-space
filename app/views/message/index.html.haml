@@ -1,0 +1,33 @@
+.wrapper
+  = render 'shared/side_bar'
+  .chat
+    .top-bar
+      チャットグループが作成されました。
+    .header
+      .main-header
+        .left-header
+          .left-header__title
+            Sampleグループ
+          %ul.left-header__members
+            Member：
+            %li
+              sample
+            %li
+              sample
+            %li
+              sample
+        .right-header
+          .right-header__button
+            Edit
+    .message_wrapper
+      = render partial: 'shared/messages'
+
+
+    .form
+      %form
+        %input.form__message
+          .form__mask
+            %label.form__mask__image
+              = fa_icon 'picture-o', class: 'icon'
+              %input.hidden{type: 'file'}
+        %input.form__submit{type: 'submit', value: 'Send'}
