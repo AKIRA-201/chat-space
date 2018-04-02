@@ -11,11 +11,12 @@ module ChatSpace
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
-
-     config.generators do |g|
-      g.javascripts false
-      g.helper false
-      g.test_framework false
-     end
+    config.i18n.default_locale = :ja
+    config.time_zone = 'Tokyo'
+    Time::DATE_FORMATS[:default] = '%Y/%m/%d %H:%M'
+    Time::DATE_FORMATS[:datetime] = '%Y/%m/%d %H:%M'
+    Time::DATE_FORMATS[:date] = '%Y/%m/%d'
+    Time::DATE_FORMATS[:time] = '%H:%M:%S'
+    Date::DATE_FORMATS[:default] = '%Y/%m/%d'
   end
 end
