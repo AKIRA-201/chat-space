@@ -6,7 +6,7 @@
       box-sizing: border-box;
       position: top;
       padding: 0 40px;
-      height: 80px;
+      height: 100px;
       .left-header {
         float: left;
         color: white;
@@ -40,11 +40,11 @@
     }
   }
 
-  .messages {
+  .message_wrapper {
     background-color: #FAFAFA;
     box-sizing: border-box;
     padding: 46px 40px 0;
-    height: calc(100% - 100px - 90px);
+    height: calc(100% - 90px - 100px);
     .message {
       .upper-message {
         display: flex;
@@ -152,12 +152,4 @@
       }
     }
   }
-}
-
-.top-bar {
-  background-color: #38AEF0;
-  font-size: 15px;
-  text-align: center;
-  color: white;
-  clear: both;
 }
