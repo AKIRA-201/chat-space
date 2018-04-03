@@ -6,7 +6,7 @@ $(function(){
                     <p>${ message.name }</p>
                     </div>
                     <div class="upper-message__date">
-                    <p>${ message.date }</p>
+                    <p>${ message.created_at }</p>
                     </div>
                   </div>
                   <div class="lower-meesage">
@@ -17,6 +17,7 @@ $(function(){
               </div>`
     return html;
   }
+
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -31,8 +32,10 @@ $(function(){
     })
     .done(function(data){
       var html = buildHTML(data);
-      $('.messages').append(html);
-      $('.messages').animate(html);slideDown();
+      $('.message_wrapper').append(html);
+      $('.form__message').val('');
+      $('.form__submit').prop('disabled', false)
+      $('.message_wrapper').animate({scrollTop: $('.message_wrapper')[0].scrollHeight}, 1000);
     })
     .fail(function(){
       alert('error');
