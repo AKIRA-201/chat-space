@@ -45,6 +45,7 @@
     box-sizing: border-box;
     padding: 46px 40px 0;
     height: calc(100% - 90px - 100px);
+    overflow-y: scroll;
     .message {
       .upper-message {
         display: flex;
