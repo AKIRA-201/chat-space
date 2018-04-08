@@ -12,7 +12,7 @@ $(function() {
 
   function appendNoUser(user){
     var html =
-    `<div class='chat-group-user clearfix>
+    `<div class='chat-group-user clearfix'>
       <p class='chat-group-user__name'>${user}</p>
     </div>`
     search_list.append(html);
