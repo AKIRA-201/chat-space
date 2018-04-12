@@ -13,10 +13,5 @@ module ChatSpace
     # -- all .rb files in that directory are automatically loaded.
     config.i18n.default_locale = :ja
     config.time_zone = 'Asia/Tokyo'
-    # Time::DATE_FORMATS[:default] = '%Y/%m/%d %H:%M'
-    # Time::DATE_FORMATS[:datetime] = '%Y/%m/%d %H:%M'
-    # Time::DATE_FORMATS[:date] = '%Y/%m/%d'
-    # Time::DATE_FORMATS[:time] = '%H:%M:%S'
-    # Date::DATE_FORMATS[:default] = '%Y/%m/%d'
   end
 end
