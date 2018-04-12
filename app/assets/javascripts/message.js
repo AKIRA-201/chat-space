@@ -47,22 +47,20 @@ $(function(){
   })
 
   var interval = setInterval(function(){
-    var messageID = $('.message:last').attr('message-id');
-    $('.message') == null ? messageID = 0 : messageID = $('.message:last').data('message-id')
+    $('.message') == null ? messageId = 0 : messageId = $('.message:last').data('message-id')
     if(window.location.pathname.match(/\/groups\/\d+\/messages/)){
     $.ajax({
       url: window.location.href,
       dataType: 'json',
       data: {
-        message: { id: messageID }
+        message: { id: messageId }
       },
       type: 'GET',
     })
     .done(function(message) {
-      console.log(message);
       var insertHTML = '';
-      message.forEach(function(message) {
-        insertHTML += buildHTML(message);
+      message.forEach(function(messages) {
+        insertHTML += buildHTML(messages);
         $('.message_wrapper').append(insertHTML);
         $('.message_wrapper').animate({scrollTop: $('.message_wrapper')[0].scrollHeight}, 1000);
       });
