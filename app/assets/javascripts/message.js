@@ -48,12 +48,12 @@ $(function(){
 
   var interval = setInterval(function(){
     $('.message') == null ? messageId = 0 : messageId = $('.message:last').data('message-id')
-    if(window.location.pathname.match(/\/groups\/\d+\/messages/)){
+    if(window.location.href.match(/\/groups\/\d+\/messages/)){
     $.ajax({
       url: window.location.href,
       dataType: 'json',
       data: {
-        message: { id: messageId }
+        id: messageId
       },
       type: 'GET',
     })
