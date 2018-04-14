@@ -1,8 +1,9 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.10.1"
 
+set :linked_files, %w{ config/secrets.yml }
 set :application, "chat-space"
-set :repo_url, 'git@github.com:AKIRA-201/chat-space.git'
+set :repo_url, 'https://github.com/AKIRA-201/chat-space.git'
 
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
 
