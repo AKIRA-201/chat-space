@@ -43,6 +43,7 @@ gem "font-awesome-rails"
 gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'unf_ext', '~> 0.0.7.5'
 
 
 group :development, :test do
